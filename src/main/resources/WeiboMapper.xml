@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>  
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="zx.soft.impala.test.dao.WeiboMapper">
+
+<!-- 	<sql id="weiboColumns">wid,username,repostscount,commentscount,text,createat,owid,ousername,favorited,originalpic,source,visible,lasttime
+	</sql>
+
+	<select id="getWeiboData" resultType="Weibo" >
+		SELECT <include refid="weiboColumns" /> FROM ${tablename} WHERE id >= #{from} AND #{from}+9);
+	</select>
+ -->
+</mapper>
