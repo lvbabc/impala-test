@@ -4,7 +4,7 @@
   "http://mybatis.org/dtd/mybatis-3-config.dtd">
 <configuration>
 	<typeAliases>
-	<!-- 给实体类增加一个别名 -->
+		<!-- 给实体类增加一个别名 -->
 		<typeAlias type="zx.soft.impala.test.domain.Weibo" alias="Weibo" />
 	</typeAliases>
 	<environments default="development">
@@ -12,14 +12,18 @@
 			<transactionManager type="JDBC" />
 			<dataSource type="POOLED">
 				<property name="driver" value="com.mysql.jdbc.Driver" />
-				<property name="url" value="jdbc:mysql://192.168.3.21:3306/weibo_sina?useUnicode=true&amp;characterEncoding=utf-8"/>
-				<property name="username" value="weibosina" />
-				<property name="password" value="OyiaV5M53qTqlZjmN0OOtA==" />
+				<!-- <property name="url" value="jdbc:mysql://192.168.3.21:3306/weibo_sina?useUnicode=true&amp;characterEncoding=utf-8" 
+					/> <property name="username" value="weibosina" /> <property name="password" 
+					value="OyiaV5M53qTqlZjmN0OOtA==" /> -->
+				<property name="url"
+					value="jdbc:mysql://192.168.31.26:3306/weibo_sina?useUnicode=true&amp;characterEncoding=utf-8" />
+				<property name="username" value="bigdata" />
+				<property name="password" value="bigdata" />
 				<property name="driver.encoding" value="UTF8" />
 			</dataSource>
-		</environment> 
+		</environment>
 	</environments>
-  <mappers>
-		  <mapper resource="WeiboMapper.xml" /> 
-	</mappers> 
+	<mappers>
+		<mapper resource="WeiboMapper.xml" />
+	</mappers>
 </configuration>

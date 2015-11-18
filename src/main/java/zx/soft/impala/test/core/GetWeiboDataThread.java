@@ -36,25 +36,24 @@ public class GetWeiboDataThread implements Runnable {
 			for (Weibo weibo : weibos) {
 				String keyWord = format.format(weibo.getUsername()) + format.format(weibo.getCreateat())
 						+ format.format(weibo.getWid());
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "us", String.valueOf(weibo.getUsername()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "re", String.valueOf(weibo.getRepostscount()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "co", String.valueOf(weibo.getCommentscount()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "te", String.valueOf(weibo.getText()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "cr", String.valueOf(weibo.getCreateat()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "ow", String.valueOf(weibo.getOwid()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "ou", String.valueOf(weibo.getOusername()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "fa", String.valueOf(weibo.isFavorited()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "or", String.valueOf(weibo.getOriginalpic()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "so", String.valueOf(weibo.getSource()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "vi", String.valueOf(weibo.getVisible()));
-				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "la", String.valueOf(weibo.getLasttime()));
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "us", weibo.getUsername());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "re", weibo.getRepostscount());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "co", weibo.getCommentscount());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "te", weibo.getText());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "cr", weibo.getCreateat());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "ow", weibo.getOwid());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "ou", weibo.getOusername());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "fa", weibo.isFavorited());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "or", weibo.getOriginalpic());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "so", weibo.getSource());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "vi", weibo.getVisible());
+				hbaseTable.put(keyWord, Constant.sina_weibo_cf, "la", weibo.getLasttime());
 			}
 			hbaseTable.execute();
 			hbaseTable.close();
-			logger.info("succeed get weibo data size=" + weibos.size());
+			logger.info("succeed insert" + weibos.size());
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
 	}
-
 }

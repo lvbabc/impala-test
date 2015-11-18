@@ -70,7 +70,8 @@ public class SQLOperation {
 
 	public static void main(String[] args) {
 		SQLOperation sqlOperation = new SQLOperation();
-		List<Weibo> weibos = sqlOperation.getWeiboData("sina_user_weibos_1386622641", 0);
+		List<Weibo> weibos = sqlOperation.getWeiboData("sina_user_weibos_1391506521", 0);
+		System.out.println(weibos.size());
 		//sqlOperation.getCount("sina_user_weibos_1386614765");
 		//sqlOperation.getTablename();
 	}

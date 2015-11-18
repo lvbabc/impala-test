@@ -16,7 +16,7 @@ import com.google.protobuf.ServiceException;
 public class MainPostThread {
 
 	public static void main(String[] args) throws MasterNotRunningException, ZooKeeperConnectionException, IOException,
-	ServiceException {
+			ServiceException {
 
 		HBaseClient client = new HBaseClient();
 		client.createTable(Constant.sina_weibo_table_name, Constant.sina_weibo_cf);

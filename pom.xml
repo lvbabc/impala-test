@@ -8,8 +8,19 @@
 		<artifactId>common-parent</artifactId>
 		<version>1.0.0</version>
 	</parent>
+	
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<cdh.hive.version>0.13.1-cdh5.2.1</cdh.hive.version>
+	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.apache.hive</groupId>
+			<artifactId>hive-jdbc</artifactId>
+			<version>${cdh.hive.version}</version>
+		</dependency>
 		<!-- HBase -->
 		<dependency>
 			<groupId>zx.soft</groupId>
