@@ -13,8 +13,8 @@ public class QuerySpeedTest {
 		//000000000000001042700000000012571475960000000000005840022最小key
 		//000000000176037346700000000013428300920003470143277174799
 		Format format = new DecimalFormat("0000000000000000000");
-		String keyStart = format.format(3497358872L);
-		String keyEnd = format.format(3497358873L);
+		String keyStart = format.format(2337893400L);
+		String keyEnd = format.format(2337893401L);
 		long i = 0;
 		String sqlStatement = "select count(*) from sina_weibo_100million where key between \'" + keyStart
 				+ "\' and \'" + keyEnd + "\'";

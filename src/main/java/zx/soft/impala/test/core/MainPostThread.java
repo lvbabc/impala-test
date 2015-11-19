@@ -7,11 +7,11 @@ import org.apache.hadoop.hbase.MasterNotRunningException;
 import org.apache.hadoop.hbase.ZooKeeperConnectionException;
 import org.apache.hadoop.hbase.client.HConnection;
 
+import com.google.protobuf.ServiceException;
+
 import zx.soft.hbase.api.core.HBaseClient;
 import zx.soft.hbase.api.core.HConn;
 import zx.soft.impala.test.utils.Constant;
-
-import com.google.protobuf.ServiceException;
 
 public class MainPostThread {
 
